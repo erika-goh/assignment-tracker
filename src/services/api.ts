@@ -1,7 +1,7 @@
 import { Assignment, WorkDateRange } from '../types/assignment';
 
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-app-name.vercel.app/api' 
+  ? 'https://assignment-tracker-abc123.vercel.app/api'  // Replace with your actual Vercel URL
   : 'http://localhost:3000/api';
 
 class ApiError extends Error {
