@@ -1,0 +1,308 @@
+.assignment-item {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.assignment-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.assignment-item.completed {
+  opacity: 0.7;
+  background: #f8fafc;
+}
+
+.assignment-item.overdue {
+  border-color: #ef4444;
+  background: linear-gradient(135deg, #fef2f2 0%, #fef7f7 100%);
+}
+
+.assignment-item.due-soon {
+  border-color: #f59e0b;
+  background: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+}
+
+.assignment-header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.assignment-checkbox {
+  flex-shrink: 0;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.checkbox:hover {
+  border-color: #667eea;
+  background: #f8fafc;
+}
+
+.checkbox.checked {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-color: #10b981;
+  color: white;
+}
+
+.check-icon {
+  width: 14px;
+  height: 14px;
+  stroke-width: 3;
+}
+
+.assignment-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.assignment-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.assignment-item.completed .assignment-title {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.assignment-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.subject {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.priority-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.assignment-description {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.assignment-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.edit-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.delete-btn {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.assignment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.due-date, .start-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.date-icon {
+  width: 14px;
+  height: 14px;
+  color: #94a3b8;
+}
+
+.date-text {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.date-text.overdue {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.date-text.due-soon {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.overdue-badge, .due-soon-badge, .started-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.overdue-badge {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.due-soon-badge {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.started-badge {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.edit-input, .edit-select {
+  padding: 8px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.edit-input:focus, .edit-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.save-btn, .cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-btn {
+  background: #10b981;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #059669;
+}
+
+.cancel-btn {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.cancel-btn:hover {
+  background: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .assignment-item {
+    padding: 16px;
+  }
+  
+  .assignment-header {
+    gap: 12px;
+  }
+  
+  .assignment-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .assignment-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
